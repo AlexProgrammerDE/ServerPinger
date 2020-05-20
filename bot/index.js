@@ -10,14 +10,13 @@ client.on('message', msg => {
     if (msg.content === 'ping') {
 
         // Promise
-        pinger.pingPromise('localhost', 25565)
-            .then(result)
+        pinger.pingPromise('hypixel.net', 25565)
+            .then(console.log)
             .catch(console.error)
-        msg.reply(result);
+
         // Async
-        pinger.ping('localhost', 25565, (error, result) => {
+        pinger.ping('hypixel.net', 25565, (error, result) => {
             if (error) return console.error(error)
-            msg.reply(result);
         })
     }
 });
