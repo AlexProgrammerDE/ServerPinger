@@ -4,7 +4,8 @@
   "description": "",
   "main": "./bot/index.js",
   "scripts": {
-    "start": "node ./bot/index.js"
+    "start": "node ./index.js",
+    "fix": "standard --fix"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
   "homepage": "https://github.com/AlexProgrammerDE/minecraft-server-pinger-bot#readme",
   "dependencies": {
     "discord.js": "^12.2.0",
-    "minecraft-pinger": "^1.0.3"
+    "mcping-js": "^1.5.0",
+    "minecraft-protocol": "^1.13.0",
+    "standart": "^6.1.0"
   }
 }
