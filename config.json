@@ -1,5 +1,8 @@
 {
     "host": "6b6t.org",
     "port": 25565,
-    "version": "1.16.1"
+    "version": "1.16.1",
+    "url":"https://6b6t.org",
+    "presence":"6b6t.org | (help",
+    "description":"Some data about 6b6t.org."
 }

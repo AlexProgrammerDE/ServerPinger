@@ -13,10 +13,10 @@ client.on('ready', () => {
     status: 'online',
     activity: {
       type: 'PLAYING',
-      url: 'https://6b6t.org',
-      name: '6b6t.org | (help',
+      url: config.url,
+      name: config.presence,
       application: {
-        id: '712245398269329511'
+        id: secrets.applicationid
       }
     }
   })
@@ -70,7 +70,7 @@ client.on('ready', () => {
 })
 
 client.on('message', message => {
-  if (message.author.id === '707442324958871594' /* Leees ID */ || message.author.id === '449812061514629139' /* Pistonmasters ID */) {
+  if (message.author.id === '684903931310112792' /* Masons ID */ || message.author.id === '449812061514629139' /* Pistonmasters ID */) {
     if (message.content.startsWith('(setup ')) {
       var split = message.content.split(' ')
 
@@ -107,7 +107,7 @@ client.on('message', message => {
           console.log(err)
           message.reply('Sorry something went wrong. :(')
         } else {
-          message.reply('Players on 6b6t.org: ' + pingResult.players.online.toString())
+          message.reply('Players on ' + config.host + ': ' + pingResult.players.online.toString())
         }
       })
     }
@@ -130,7 +130,7 @@ client.on('message', message => {
 
           motd = motd.replace(/§4/gi, '').replace(/§c/gi, '').replace(/§6/gi, '').replace(/§e/gi, '').replace(/§2/gi, '').replace(/§a/gi, '').replace(/§b/gi, '').replace(/§3/gi, '').replace(/§1/gi, '').replace(/§9/gi, '').replace(/§d/gi, '').replace(/§5/gi, '').replace(/§f/gi, '').replace(/§7/gi, '').replace(/§8/gi, '').replace(/§0/gi, '').replace(/§r/gi, '').replace(/§l/gi, '').replace(/§o/gi, '').replace(/§n/gi, '').replace(/§m/gi, '').replace(/§k/gi, '').replace('6b6t ', '')
 
-          message.reply('Motd on 6b6t.org: ' + motd)
+          message.reply('Motd on ' + config.host + ': ' + motd)
         }
       })
     }
@@ -173,9 +173,9 @@ client.on('message', message => {
             .addField('Motd:', pingResult.description.text.replace(/§4/gi, '').replace(/§c/gi, '').replace(/§6/gi, '').replace(/§e/gi, '').replace(/§2/gi, '').replace(/§a/gi, '').replace(/§b/gi, '').replace(/§3/gi, '').replace(/§1/gi, '').replace(/§9/gi, '').replace(/§d/gi, '').replace(/§5/gi, '').replace(/§f/gi, '').replace(/§7/gi, '').replace(/§8/gi, '').replace(/§0/gi, '').replace(/§r/gi, '').replace(/§l/gi, '').replace(/§o/gi, '').replace(/§n/gi, '').replace(/§m/gi, '').replace(/§k/gi, '').replace('6b6t ', ''))
             .addField('Queue', queue1 + '\n' + queue2)
             .setAuthor('Pistonmaster', 'https://avatars0.githubusercontent.com/u/40795980?s=460&v=4', 'https://github.com/AlexProgrammerDE')
-            .setFooter('6b6t Pinger', 'https://cdn.discordapp.com/app-icons/712245398269329511/404c1e5fee8870c35241de4241933cc3.png')
-            .setURL('https://www.6b6t.org/')
-            .setDescription('Some data about 6b6t.org.')
+            .setFooter('Server Pinger', 'https://cdn.discordapp.com/app-icons/712245398269329511/404c1e5fee8870c35241de4241933cc3.png')
+            .setURL(config.url)
+            .setDescription(config.description)
             .setTimestamp(Date.now())
 
           message.channel.send(embed)
@@ -210,7 +210,7 @@ client.on('message', message => {
   }
 
   if (message.content.startsWith('(help')) {
-    message.reply('These are my commands: (ping, (online, (motd' /* + ', (queue' */)
+    message.reply('This are my commands: (ping, (online, (motd, (queue')
   }
 })
 
