@@ -1,8 +1,10 @@
 {
-    "host": "6b6t.org",
-    "port": 25565,
-    "version": "1.16.1",
-    "url":"https://6b6t.org",
-    "presence":"6b6t.org | (help",
-    "description":"Some data about 6b6t.org."
+  "servername": "7b7t",
+  "host": "7b7t.me",
+  "port": 25565,
+  "version": "1.16.1",
+  "url": "https://7b7t.me",
+  "presence": "7b7t.me | (help",
+  "description": "Some data about 7b7t.me.",
+  "interval": "15000"
 }
