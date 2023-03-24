@@ -30,6 +30,6 @@
     "standart": "^6.1.0",
     "ts-node": "^10.2.1",
     "ts-standard": "^10.0.0",
-    "typescript": "^4.4.3"
+    "typescript": "^5.0.0"
   }
 }
